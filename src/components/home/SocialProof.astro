@@ -1,0 +1,102 @@
+---
+import Card from '@/components/common/Card.astro';
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
+    <div class="text-center mb-12">
+      <h2 class="text-h1 sm:text-[32px] mb-4">Trusted by developers</h2>
+      <p class="text-muted-foreground max-w-[600px] mx-auto">
+        Join thousands of developers deploying with confidence
+      </p>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <!-- Testimonial 1 -->
+      <Card hover={true}>
+        <div class="space-y-4">
+          <p class="text-sm italic">
+            "Kubeletto reduced our deployment time from hours to minutes. The zero-config approach just works."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+              <!-- TODO: Add customer avatar -->
+              <span class="text-xs font-mono">JD</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold">Jane Doe</p>
+              <p class="text-xs text-muted-foreground">CTO at TechStartup</p>
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      <!-- Testimonial 2 -->
+      <Card hover={true}>
+        <div class="space-y-4">
+          <p class="text-sm italic">
+            "The auto-scaling saved us during a traffic spike. Kubeletto handled everything automatically."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+              <!-- TODO: Add customer avatar -->
+              <span class="text-xs font-mono">AS</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold">Alex Smith</p>
+              <p class="text-xs text-muted-foreground">Lead Developer at Acme Corp</p>
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      <!-- Testimonial 3 -->
+      <Card hover={true}>
+        <div class="space-y-4">
+          <p class="text-sm italic">
+            "Moving from manual deploys to Kubeletto was a game changer. We ship features faster now."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+              <!-- TODO: Add customer avatar -->
+              <span class="text-xs font-mono">MJ</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold">Morgan Johnson</p>
+              <p class="text-xs text-muted-foreground">Founder at BuildFast</p>
+            </div>
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!-- Customer Logos Placeholder -->
+    <div class="mb-12">
+      <p class="text-center text-sm text-muted-foreground mb-6">Used by teams at</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 opacity-60">
+        <!-- TODO: Add customer logos -->
+        <div class="text-xs font-mono">Acme Corp</div>
+        <div class="text-xs font-mono">TechStartup Inc</div>
+        <div class="text-xs font-mono">BuildFast</div>
+        <div class="text-xs font-mono">DevTeam Co</div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      <div>
+        <p class="text-4xl font-bold text-primary mb-2">50,000+</p>
+        <p class="text-sm text-muted-foreground">Deployments per month</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold text-primary mb-2">500+</p>
+        <p class="text-sm text-muted-foreground">Developers trust Kubeletto</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold text-primary mb-2">99.9%</p>
+        <p class="text-sm text-muted-foreground">Uptime guarantee</p>
+      </div>
+    </div>
+  </div>
+</section>

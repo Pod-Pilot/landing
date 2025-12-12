@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Hero from '@/components/home/Hero.astro';
+import ProblemSolution from '@/components/home/ProblemSolution.astro';
+import FeaturesGrid from '@/components/home/FeaturesGrid.astro';
+import HowItWorks from '@/components/home/HowItWorks.astro';
+import IntegrationLogos from '@/components/home/IntegrationLogos.astro';
+import PricingTeaser from '@/components/home/PricingTeaser.astro';
+import SocialProof from '@/components/home/SocialProof.astro';
+import CTASection from '@/components/home/CTASection.astro';
+---
+
+<BaseLayout
+  title="Kubeletto - Deploy anywhere. Focus on code."
+  description="Kubeletto handles Kubernetes complexity so you don't have to. From git push to production in 60 seconds."
+>
+  <Header />
+  <main>
+    <Hero />
+    <ProblemSolution />
+    <FeaturesGrid />
+    <HowItWorks />
+    <IntegrationLogos />
+    <PricingTeaser />
+    <SocialProof />
+    <CTASection />
+  </main>
+  <Footer />
+</BaseLayout>
