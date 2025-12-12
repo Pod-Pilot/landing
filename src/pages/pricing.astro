@@ -45,7 +45,7 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
               <p class="text-sm text-muted-foreground">Perfect for personal projects</p>
             </div>
 
-            <Button href={`${consoleUrl}/sign-in`} variant="secondary" class="w-full">
+            <Button href={`${consoleUrl}/sign-in`} variant="secondary" class="w-full" data-ph-capture-attribute-cta="pricing_free_start">
               Start Free
             </Button>
 
@@ -94,7 +94,7 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
               <p class="text-sm text-muted-foreground">For growing teams and startups</p>
             </div>
 
-            <Button href={`${consoleUrl}/sign-in?plan=pro`} variant="primary" class="w-full">
+            <Button href={`${consoleUrl}/sign-in?plan=pro`} variant="primary" class="w-full" data-ph-capture-attribute-cta="pricing_pro_start_trial">
               Start Free Trial
             </Button>
 
@@ -144,7 +144,7 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
               <p class="text-sm text-muted-foreground">For large teams with custom needs</p>
             </div>
 
-            <Button href="/contact" variant="secondary" class="w-full">
+            <Button href="/contact" variant="secondary" class="w-full" data-ph-capture-attribute-cta="pricing_enterprise_contact">
               Contact Sales
             </Button>
 
@@ -273,6 +273,11 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
   toggleButtons.forEach(button => {
     button.addEventListener('click', () => {
       const billing = button.getAttribute('data-billing');
+
+      // Track billing toggle in PostHog
+      if (window.trackEvent) {
+        window.trackEvent('pricing_billing_toggle', { billing_period: billing });
+      }
 
       // Update button states
       toggleButtons.forEach(btn => {

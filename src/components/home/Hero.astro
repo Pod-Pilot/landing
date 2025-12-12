@@ -21,10 +21,10 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-4">
-          <Button href={`${consoleUrl}/sign-in`} variant="primary" size="lg">
+          <Button href={`${consoleUrl}/sign-in`} variant="primary" size="lg" data-ph-capture-attribute-cta="hero_start_free_trial">
             Start Free Trial
           </Button>
-          <Button href="/docs" variant="secondary" size="lg">
+          <Button href="/docs" variant="secondary" size="lg" data-ph-capture-attribute-cta="hero_view_docs">
             View Docs
           </Button>
         </div>
