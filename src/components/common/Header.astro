@@ -6,7 +6,7 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
   <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-[1200px]">
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-2">
-      <img src="/logo-with-name.svg" alt="Kubeletto" class="h-8" />
+      <img src="/logo.svg" alt="Kubeletto" class="h-12 dark:invert" />
     </a>
 
     <!-- Desktop Navigation -->
@@ -32,14 +32,14 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
       </a>
       <a
         href={`${consoleUrl}/sign-up`}
-        class="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-200 active:scale-[0.98]"
+        class="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-all duration-200 active:scale-[0.98]"
       >
         Start Free Trial
       </a>
       <button
         id="theme-toggle"
         type="button"
-        class="inline-flex items-center justify-center h-9 w-9 rounded-sm bg-transparent text-foreground hover:bg-muted transition-colors"
+        class="inline-flex items-center justify-center h-9 w-9 rounded-lg bg-transparent text-foreground hover:bg-muted transition-colors"
         aria-label="Toggle theme"
       >
         <svg class="h-5 w-5 sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -55,7 +55,7 @@ const consoleUrl = import.meta.env.CONSOLE_URL || 'https://console.kubeletto.com
       <button
         id="mobile-menu-toggle"
         type="button"
-        class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-sm bg-transparent text-foreground hover:bg-muted transition-colors"
+        class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg bg-transparent text-foreground hover:bg-muted transition-colors"
         aria-label="Toggle menu"
       >
         <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

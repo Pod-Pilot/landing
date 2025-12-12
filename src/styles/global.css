@@ -9,77 +9,79 @@
     --font-sans: 'Geist', system-ui, sans-serif;
     --font-mono: 'Geist Mono', monospace;
 
-    /* Light mode colors */
+    /* Light mode colors - aligned with console/design-guide.md */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 222.2 84% 4.9%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --border: 0 0% 0% / 0.1;
-    --input: 0 0% 0% / 0.1;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
 
-    /* Kubeletto Blue (Light Mode) */
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Slate Blue (not bright blue) */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --accent: 240 5% 96%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 4 90% 58%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --ring: 211 100% 50%;
+    --ring: 215 20.2% 65.1%;
 
-    /* Kubeletto brand blue */
-    --kubeletto-blue: 211 100% 50%;
+    /* Kubeletto brand - Signal Green for "The Spark" accents */
+    --kubeletto-green: 142 71% 45%;
 
     --radius: 0.75rem;
+    --radius-card: 1rem;
+    --radius-button: 0.5rem;
   }
 
   .dark {
-    /* Dark mode colors */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
+    /* Dark mode colors - aligned with console/design-guide.md */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --muted: 0 0% 11%;
-    --muted-foreground: 0 0% 63%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 100%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --border: 0 0% 100% / 0.1;
-    --input: 0 0% 100% / 0.1;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
 
-    /* Kubeletto Blue (Dark Mode) */
-    --primary: 211 100% 52%;
-    --primary-foreground: 0 0% 0%;
+    /* Primary inverted for dark mode */
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 0 0% 11%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 0 0% 11%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 4 90% 58%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --ring: 211 100% 52%;
+    --ring: 215 20.2% 65.1%;
 
-    /* Kubeletto brand blue */
-    --kubeletto-blue: 211 100% 52%;
+    /* Kubeletto brand - Signal Green */
+    --kubeletto-green: 142 71% 45%;
   }
 
   * {
