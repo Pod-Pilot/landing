@@ -48,10 +48,6 @@ const config: Config = {
         },
         kubeletto: {
           blue: 'hsl(var(--kubeletto-blue))',
-          green: 'hsl(var(--kubeletto-green))',
-        },
-        signal: {
-          green: 'hsl(var(--signal-green))',
         },
       },
       borderRadius: {

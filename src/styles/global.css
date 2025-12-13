@@ -41,9 +41,7 @@
     --ring: 215 20.2% 65.1%;
 
     /* Kubeletto brand - Signal Green for "The Spark" accents */
-    --kubeletto-green: 142 71% 45%; /* #22C55E */
-    --kubeletto-blue: 222.2 47.4% 11.2%; /* For orb gradients */
-    --signal-green: 142 71% 45%; /* #22C55E - Success states */
+    --kubeletto-green: 142 71% 45%;
 
     --radius: 0.75rem;
     --radius-card: 1rem;
@@ -84,8 +82,6 @@
 
     /* Kubeletto brand - Signal Green */
     --kubeletto-green: 142 71% 45%;
-    --kubeletto-blue: 210 40% 98%;
-    --signal-green: 142 71% 45%;
   }
 
   * {
