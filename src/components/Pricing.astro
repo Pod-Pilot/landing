@@ -1,5 +1,6 @@
 ---
 // Pricing Component - Three-tier pricing cards with hover effects
+import { config } from '../config';
 ---
 
 <section class="pricing" id="pricing" aria-labelledby="pricing-title">
@@ -11,19 +12,19 @@
   <div class="pricing-cards">
     <div class="pricing-card reveal reveal-delay-1">
       <p class="pricing-tier">Starter</p>
-      <p class="pricing-price">$0 <span>/mo</span></p>
+      <p class="pricing-price">$3 <span>/mo</span></p>
       <p class="pricing-desc">Perfect for side projects and learning.</p>
       <ul class="pricing-features">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 project</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Shared resources</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Community support</li>
       </ul>
-      <a href="#signup" class="pricing-btn secondary">Get Started</a>
+      <a href={config.consoleUrl} class="pricing-btn secondary">Get Started</a>
     </div>
 
     <div class="pricing-card featured reveal reveal-delay-2">
       <p class="pricing-tier">Pro</p>
-      <p class="pricing-price">$29 <span>/mo</span></p>
+      <p class="pricing-price">$9 <span>/mo</span></p>
       <p class="pricing-desc">For growing teams and production apps.</p>
       <ul class="pricing-features">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited projects</li>
@@ -31,7 +32,7 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom domains</li>
       </ul>
-      <a href="#signup" class="pricing-btn primary">Subscribe</a>
+      <a href={config.consoleUrl} class="pricing-btn primary">Subscribe</a>
     </div>
 
     <div class="pricing-card reveal reveal-delay-3">
@@ -44,7 +45,7 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SLA guarantee</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated support</li>
       </ul>
-      <a href="#signup" class="pricing-btn secondary">Contact Sales</a>
+      <a href={config.consoleUrl} class="pricing-btn secondary">Contact Sales</a>
     </div>
   </div>
 </section>
