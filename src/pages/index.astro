@@ -1,31 +1,42 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import Header from '@/components/common/Header.astro';
-import Footer from '@/components/common/Footer.astro';
-import Hero from '@/components/home/Hero.astro';
-import ProblemSolution from '@/components/home/ProblemSolution.astro';
-import FeaturesGrid from '@/components/home/FeaturesGrid.astro';
-import HowItWorks from '@/components/home/HowItWorks.astro';
-import IntegrationLogos from '@/components/home/IntegrationLogos.astro';
-import PricingTeaser from '@/components/home/PricingTeaser.astro';
-import SocialProof from '@/components/home/SocialProof.astro';
-import CTASection from '@/components/home/CTASection.astro';
+import Layout from '../layouts/Layout.astro';
+import SideNav from '../components/SideNav.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout
-  title="Kubeletto - Deploy anywhere. Focus on code."
-  description="Kubeletto handles Kubernetes complexity so you don't have to. From git push to production in 60 seconds."
->
-  <Header />
+<Layout>
+  <SideNav />
+  
   <main>
     <Hero />
-    <ProblemSolution />
-    <FeaturesGrid />
-    <HowItWorks />
-    <IntegrationLogos />
-    <PricingTeaser />
-    <SocialProof />
-    <CTASection />
+    <Features />
+    <Testimonials />
+    <Pricing />
   </main>
+
   <Footer />
-</BaseLayout>
+
+  <script is:inline>
+    // Intersection Observer for scroll reveals
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</Layout>

@@ -1,4 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-Sitemap: https://kubeletto.com/sitemap-0.xml
+Sitemap: https://kubeletto.io/sitemap-index.xml

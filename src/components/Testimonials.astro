@@ -1,0 +1,68 @@
+---
+// Testimonials Component - 3D card grid with mouse-follow tilt effect
+---
+
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="section-header reveal">
+    <p class="section-label">What developers say</p>
+    <h2 class="section-title" id="testimonials-title">Trusted by teams who value clarity.</h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal reveal-delay-1">
+      <blockquote class="testimonial-quote">Finally, a deployment tool that doesn't make me feel stupid. I pushed my first app in under 5 minutes with zero config.</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SK</div>
+        <div>
+          <p class="testimonial-name">Sarah Kim</p>
+          <p class="testimonial-role">Indie Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-2">
+      <blockquote class="testimonial-quote">The error messages alone are worth it. Instead of cryptic stack traces, I get actual solutions. It's like having a senior engineer on call.</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MR</div>
+        <div>
+          <p class="testimonial-name">Marcus Rivera</p>
+          <p class="testimonial-role">Engineering Lead, Fintech Startup</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-3">
+      <blockquote class="testimonial-quote">We moved 12 services to Kubeletto in a weekend. Our ops team went from firefighting to actually improving systems.</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JP</div>
+        <div>
+          <p class="testimonial-name">Jenna Park</p>
+          <p class="testimonial-role">CTO, Series A Startup</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  // 3D card tilt effect on testimonials
+  const cards = document.querySelectorAll('.testimonial-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 15;
+      const rotateY = (centerX - x) / 15;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>
