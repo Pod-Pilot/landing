@@ -55,9 +55,10 @@ import { config } from '../config';
 
 <style>
   footer {
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border);
+    background: var(--ink);
+    color: var(--paper);
     padding: 4rem 2rem 2rem;
+    margin-left: var(--nav-width);
   }
 
   .footer-content {
@@ -87,24 +88,24 @@ import { config } from '../config';
   .footer-logo-icon {
     width: 2.5rem;
     height: 2.5rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    background: var(--paper);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--bg);
+    color: var(--ink);
   }
 
   .footer-brand {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--paper);
   }
 
   .footer-tagline {
-    color: var(--text-muted);
+    color: var(--steel);
     font-size: 0.9rem;
   }
 
@@ -123,28 +124,28 @@ import { config } from '../config';
   .footer-section-title {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--paper);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
   }
 
   .footer-link {
-    color: var(--text-muted);
+    color: var(--steel);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s ease;
   }
 
   .footer-link:hover {
-    color: var(--accent);
+    color: var(--blue);
   }
 
   .footer-contact-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--text-muted);
+    color: var(--steel);
     font-size: 0.9rem;
   }
 
@@ -159,16 +160,16 @@ import { config } from '../config';
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
 
   .footer-copy {
-    color: var(--text-muted);
+    color: var(--steel);
     font-size: 0.85rem;
   }
 
   .footer-payment {
-    color: var(--text-muted);
+    color: var(--steel);
     font-size: 0.85rem;
     display: flex;
     align-items: center;
@@ -176,6 +177,10 @@ import { config } from '../config';
   }
 
   @media (max-width: 768px) {
+    footer {
+      margin-left: 0;
+    }
+
     .footer-main {
       grid-template-columns: 1fr;
       gap: 2rem;
