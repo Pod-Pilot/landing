@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy | Kubeletto" description="Privacy Policy for Kubeletto - How we collect, use, and protect your data">
+  <main class="legal-page">
+    <div class="legal-content">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Home
+      </a>
+      
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: December 27, 2025</p>
+
+      <section>
+        <h2>1. Introduction</h2>
+        <p>Kubeletto ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our cloud deployment platform.</p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <h3>Personal Information</h3>
+        <ul>
+          <li>Name and email address</li>
+          <li>Account credentials</li>
+          <li>Payment information (processed by Xendit)</li>
+          <li>GitHub/GitLab account information for repository access</li>
+        </ul>
+        <h3>Usage Information</h3>
+        <ul>
+          <li>Application deployment logs</li>
+          <li>Service usage metrics</li>
+          <li>IP address and browser information</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Provide and maintain our services</li>
+          <li>Process your transactions and subscriptions</li>
+          <li>Send you service-related communications</li>
+          <li>Respond to your inquiries and support requests</li>
+          <li>Improve our services and user experience</li>
+          <li>Detect and prevent fraud or abuse</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Payment Processing</h2>
+        <p>We use Xendit as our payment processor. When you make a payment, your payment information is collected and processed directly by Xendit in accordance with their privacy policy and security standards. We do not store your complete credit card or bank account details on our servers.</p>
+      </section>
+
+      <section>
+        <h2>5. Data Security</h2>
+        <p>We implement appropriate technical and organizational security measures to protect your personal information, including:</p>
+        <ul>
+          <li>Encryption of data in transit and at rest</li>
+          <li>Regular security assessments</li>
+          <li>Access controls and authentication</li>
+          <li>Secure infrastructure hosted on enterprise-grade cloud providers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Data Retention</h2>
+        <p>We retain your personal information for as long as your account is active or as needed to provide you services. We will also retain and use your information to comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+      </section>
+
+      <section>
+        <h2>7. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal data</li>
+          <li>Correct inaccurate data</li>
+          <li>Request deletion of your data</li>
+          <li>Export your data in a portable format</li>
+          <li>Opt-out of marketing communications</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>8. Third-Party Services</h2>
+        <p>We may share your information with third-party service providers who assist us in operating our platform, including:</p>
+        <ul>
+          <li>Cloud infrastructure providers</li>
+          <li>Payment processors (Xendit)</li>
+          <li>Analytics services</li>
+          <li>Email service providers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>9. Cookies</h2>
+        <p>We use cookies and similar tracking technologies to enhance your experience on our platform. You can control cookie preferences through your browser settings.</p>
+      </section>
+
+      <section>
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+      </section>
+
+      <section>
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <ul>
+          <li>Email: support@kubeletto.com</li>
+          <li>Phone: +62 812 3456 7890</li>
+          <li>Address: Jakarta, Indonesia</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .legal-page {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: var(--bg);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .back-link svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 1rem 0 0.5rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+</style>

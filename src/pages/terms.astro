@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Terms of Service | Kubeletto" description="Terms of Service for Kubeletto - Cloud deployment platform">
+  <main class="legal-page">
+    <div class="legal-content">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Home
+      </a>
+      
+      <h1>Terms of Service</h1>
+      <p class="last-updated">Last updated: December 27, 2025</p>
+
+      <section>
+        <h2>1. Agreement to Terms</h2>
+        <p>By accessing or using Kubeletto's services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.</p>
+      </section>
+
+      <section>
+        <h2>2. Description of Service</h2>
+        <p>Kubeletto provides a cloud deployment platform that enables developers to deploy, manage, and scale applications. Our services include:</p>
+        <ul>
+          <li>Automated application deployment from Git repositories</li>
+          <li>Container orchestration and management</li>
+          <li>Custom domain configuration</li>
+          <li>Application monitoring and logging</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Subscription and Payments</h2>
+        <p>Kubeletto offers subscription-based pricing plans:</p>
+        <ul>
+          <li><strong>Starter Plan:</strong> $3/month - 1 project, shared resources</li>
+          <li><strong>Pro Plan:</strong> $9/month - Unlimited projects, dedicated resources</li>
+          <li><strong>Enterprise Plan:</strong> Custom pricing - Contact sales for details</li>
+        </ul>
+        <p>Payments are processed securely through Xendit. By subscribing, you authorize us to charge your payment method on a recurring monthly basis until you cancel your subscription.</p>
+      </section>
+
+      <section>
+        <h2>4. Billing and Cancellation</h2>
+        <ul>
+          <li>Subscriptions are billed monthly in advance</li>
+          <li>You may cancel your subscription at any time through your account settings</li>
+          <li>Cancellation takes effect at the end of the current billing period</li>
+          <li>No refunds are provided for partial months</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. User Responsibilities</h2>
+        <p>You agree to:</p>
+        <ul>
+          <li>Provide accurate account information</li>
+          <li>Maintain the security of your account credentials</li>
+          <li>Not use the service for any illegal or unauthorized purpose</li>
+          <li>Comply with all applicable laws and regulations</li>
+          <li>Not deploy malicious software or content</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Service Availability</h2>
+        <p>We strive to provide 99.9% uptime for our services. However, we do not guarantee uninterrupted access and may perform maintenance that temporarily affects service availability.</p>
+      </section>
+
+      <section>
+        <h2>7. Limitation of Liability</h2>
+        <p>Kubeletto shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
+      </section>
+
+      <section>
+        <h2>8. Termination</h2>
+        <p>We may terminate or suspend your account immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.</p>
+      </section>
+
+      <section>
+        <h2>9. Changes to Terms</h2>
+        <p>We reserve the right to modify these terms at any time. We will provide notice of significant changes by posting the new Terms on this page.</p>
+      </section>
+
+      <section>
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us:</p>
+        <ul>
+          <li>Email: support@kubeletto.com</li>
+          <li>Phone: +62 812 3456 7890</li>
+          <li>Address: Jakarta, Indonesia</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .legal-page {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: var(--bg);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .back-link svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+</style>
