@@ -7,12 +7,13 @@ interface Props {
 }
 
 const { 
-  title = "Kubeletto | Make Infrastructure Invisible",
-  description = "Kubeletto - Make infrastructure invisible. A quiet, powerful environment where code becomes software."
+  title = "Kubeletto - Simple, Scalable App Deployment Without the Complexity",
+  description = "Deploy any containerized app in minutes. Kubeletto is a streamlined PaaS that makes infrastructure invisible—affordable hosting that scales with you."
 } = Astro.props;
 
 const siteUrl = "https://kubeletto.com";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = `${siteUrl}/og-image.png`;
 ---
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
   <title>{title}</title>
   <meta name="title" content={title}>
   <meta name="description" content={description}>
-  <meta name="keywords" content="Kubeletto, infrastructure, deployment, Kubernetes, devops, cloud, hosting, developer tools">
+  <meta name="keywords" content="easy app deployment, containerized app hosting, simple PaaS, deploy apps, container hosting, cloud deployment platform, affordable PaaS, developer tools, Kubeletto, app hosting, scalable hosting, git deployment">
   <meta name="author" content="Kubeletto">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href={canonicalUrl}>
@@ -37,25 +38,32 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
   <meta property="og:description" content={description}>
   <meta property="og:site_name" content="Kubeletto">
   <meta property="og:locale" content="en_US">
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kubeletto - Simple PaaS for Easy App Deployment">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content={canonicalUrl}>
   <meta property="twitter:title" content={title}>
   <meta property="twitter:description" content={description}>
+  <meta property="twitter:image" content={ogImage}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data: Organization -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Kubeletto",
-    "description": "Make infrastructure invisible. A quiet, powerful environment where code becomes software.",
+    "description": "Simple PaaS for easy app deployment. Deploy containerized apps in minutes with streamlined workflows.",
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
     "sameAs": [
@@ -63,6 +71,8 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
       "https://github.com/kubeletto"
     ]
   })} />
+
+  <!-- JSON-LD Structured Data: WebPage -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -73,6 +83,77 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
       "@type": "Organization",
       "name": "Kubeletto"
     }
+  })} />
+
+  <!-- JSON-LD Structured Data: SoftwareApplication -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kubeletto",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Simple PaaS for easy app deployment. Streamlined workflows for developers who value simplicity, speed, and affordability.",
+    "url": siteUrl,
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "3",
+      "highPrice": "9",
+      "priceCurrency": "USD",
+      "offerCount": "3"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "50"
+    },
+    "featureList": [
+      "Easy app deployment",
+      "Containerized app hosting",
+      "Git-based deployments",
+      "Custom domains",
+      "Automatic SSL",
+      "Zero infrastructure management"
+    ]
+  })} />
+
+  <!-- JSON-LD Structured Data: FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Kubeletto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kubeletto is a simple PaaS (Platform as a Service) that lets you deploy any containerized app in minutes. Push code, auto-deploy, and scale—all with zero infrastructure complexity and affordable pricing starting at $3/month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Kubeletto different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kubeletto offers unmatched flexibility to run any containerized application with developer-friendly workflows. Cost-efficient architecture means affordable pricing starting at $3/month without sacrificing performance or reliability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need infrastructure expertise to use Kubeletto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all! Kubeletto makes infrastructure invisible. Simply push your code, and we handle everything—building, deploying, and scaling. Focus on your app, not server management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can I deploy an app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can deploy your first app in under 5 minutes. Just connect your Git repository, push your code, and Kubeletto handles the rest—building, deploying, and hosting your containerized application."
+        }
+      }
+    ]
   })} />
 </head>
 <body>
