@@ -21,14 +21,17 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kubeletto - Make infrastructure invisible. A quiet, powerful environment where code becomes software.">
+  <meta name="description"
+    content="Kubeletto - Make infrastructure invisible. A quiet, powerful environment where code becomes software.">
   <title>Kubeletto | Make Infrastructure Invisible</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     /* ========================================
        CSS VARIABLES & RESET
@@ -40,13 +43,15 @@
       --paper: #FFFFFF;
       --ink: #000000;
       --ink-soft: #1a1a1a;
-      --glass: rgba(255,255,255,0.7);
+      --glass: rgba(255, 255, 255, 0.7);
       --nav-width: 80px;
       --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -66,11 +71,17 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
-      html { scroll-behavior: auto; }
+
+      html {
+        scroll-behavior: auto;
+      }
     }
 
     /* ========================================
@@ -151,7 +162,8 @@
       transform: translateX(0);
     }
 
-    .nav-link:hover, .nav-link.active {
+    .nav-link:hover,
+    .nav-link.active {
       background: var(--ink);
       color: var(--paper);
     }
@@ -226,18 +238,39 @@
     }
 
     @keyframes float1 {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-30px, 30px) rotate(10deg); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(-30px, 30px) rotate(10deg);
+      }
     }
 
     @keyframes float2 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(20px, -20px); }
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(20px, -20px);
+      }
     }
 
     @keyframes float3 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(10px, 10px) scale(1.1); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(10px, 10px) scale(1.1);
+      }
     }
 
     .hero-content {
@@ -278,8 +311,13 @@
       animation: revealUp 1s var(--ease-out-expo) forwards;
     }
 
-    .hero-title .line:nth-child(1) span { animation-delay: 0.3s; }
-    .hero-title .line:nth-child(2) span { animation-delay: 0.45s; }
+    .hero-title .line:nth-child(1) span {
+      animation-delay: 0.3s;
+    }
+
+    .hero-title .line:nth-child(2) span {
+      animation-delay: 0.45s;
+    }
 
     .hero-title .highlight {
       position: relative;
@@ -299,15 +337,22 @@
     }
 
     @keyframes revealUp {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeUp {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes scaleIn {
-      to { transform: scaleX(1); }
+      to {
+        transform: scaleX(1);
+      }
     }
 
     .hero-subtitle {
@@ -346,7 +391,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -408,8 +453,13 @@
     }
 
     @keyframes scrollDown {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(400%); }
+      0% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(400%);
+      }
     }
 
     /* ========================================
@@ -467,7 +517,7 @@
       inset: 0;
       border-radius: 24px;
       border: 1px solid transparent;
-      background: linear-gradient(135deg, rgba(0,0,0,0.05), transparent) border-box;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), transparent) border-box;
       -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
       mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -476,7 +526,7 @@
 
     .bento-card:hover {
       transform: translateY(-8px) rotateX(2deg);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
     }
 
     .bento-card.large {
@@ -544,9 +594,17 @@
       border-radius: 50%;
     }
 
-    .terminal-dot.red { background: #ff5f56; }
-    .terminal-dot.yellow { background: #ffbd2e; }
-    .terminal-dot.green { background: #27ca40; }
+    .terminal-dot.red {
+      background: #ff5f56;
+    }
+
+    .terminal-dot.yellow {
+      background: #ffbd2e;
+    }
+
+    .terminal-dot.green {
+      background: #27ca40;
+    }
 
     .terminal-line {
       color: var(--steel);
@@ -568,7 +626,10 @@
     }
 
     @keyframes terminalReveal {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ========================================
@@ -676,7 +737,7 @@
 
     .pricing-card:hover {
       transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
     }
 
     .pricing-card.featured {
@@ -855,15 +916,27 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
 
     /* ========================================
        RESPONSIVE DESIGN
     ======================================== */
     @media (max-width: 1200px) {
+
       .bento-card.large,
       .bento-card.medium {
         grid-column: span 6;
@@ -942,22 +1015,39 @@
     }
   </style>
 </head>
+
 <body>
   <!-- VERTICAL SIDE NAVIGATION -->
   <nav class="side-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-logo" aria-hidden="true">K</div>
     <div class="nav-links">
       <a href="#hero" class="nav-link active" data-label="Home" aria-label="Home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        </svg>
       </a>
       <a href="#features" class="nav-link" data-label="Features" aria-label="Features">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
       </a>
       <a href="#testimonials" class="nav-link" data-label="Testimonials" aria-label="Testimonials">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
       </a>
       <a href="#pricing" class="nav-link" data-label="Pricing" aria-label="Pricing">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
       </a>
     </div>
   </nav>
@@ -970,18 +1060,23 @@
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
       </div>
-      
+
       <div class="hero-content">
         <p class="hero-label">Introducing Kubeletto</p>
         <h1 class="hero-title" id="hero-title">
           <span class="line"><span>Make infrastructure</span></span>
           <span class="line"><span class="highlight">invisible.</span></span>
         </h1>
-        <p class="hero-subtitle">A quiet, powerful environment where code becomes software. Enter our console and experience calm, clarity, and competence.</p>
+        <p class="hero-subtitle">A quiet, powerful environment where code becomes software. Enter our console and
+          experience calm, clarity, and competence.</p>
         <div class="cta-wrapper">
           <a href="#signup" class="cta-btn" aria-label="Enter Console">
             Enter Console
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </a>
         </div>
       </div>
@@ -1003,17 +1098,22 @@
         <!-- Large card with terminal demo -->
         <div class="bento-card large reveal reveal-delay-1">
           <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
           </div>
           <h3 class="bento-title">Invisible Infrastructure</h3>
-          <p class="bento-desc">Controls appear only when needed. Progressive disclosure keeps advanced settings out of your way until you need them.</p>
+          <p class="bento-desc">Controls appear only when needed. Progressive disclosure keeps advanced settings out of
+            your way until you need them.</p>
           <div class="terminal-demo" aria-hidden="true">
             <div class="terminal-header">
               <span class="terminal-dot red"></span>
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
             </div>
-            <div class="terminal-line"><span class="prompt">$</span> kubeletto deploy</div>
+            <div class="terminal-line"><span class="prompt">$</span> git push origin main</div>
             <div class="terminal-line"><span class="success">✓</span> Building image...</div>
             <div class="terminal-line"><span class="success">✓</span> Deployed to production</div>
             <div class="terminal-line"><span class="success">✓</span> https://app.kubeletto.io</div>
@@ -1023,28 +1123,44 @@
         <!-- Medium card -->
         <div class="bento-card medium reveal reveal-delay-2">
           <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
           </div>
           <h3 class="bento-title">Radical Simplicity</h3>
-          <p class="bento-desc">Defaults that work for 90% of users. One primary action per screen. Human language, always.</p>
+          <p class="bento-desc">Defaults that work for 90% of users. One primary action per screen. Human language,
+            always.</p>
         </div>
 
         <!-- Medium card -->
         <div class="bento-card medium reveal reveal-delay-3">
           <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
           </div>
           <h3 class="bento-title">Calm Authority</h3>
-          <p class="bento-desc">Precise error handling with actionable fixes. Consistent patterns you can rely on. Objective communication that respects your time.</p>
+          <p class="bento-desc">Precise error handling with actionable fixes. Consistent patterns you can rely on.
+            Objective communication that respects your time.</p>
         </div>
 
         <!-- Large card -->
         <div class="bento-card large reveal reveal-delay-4">
           <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+              </path>
+            </svg>
           </div>
           <h3 class="bento-title">Fluid Interactions</h3>
-          <p class="bento-desc">Responsive and alive. Our UI defers to your content—it's the frame, not the painting. Every interaction feels purposeful and fast.</p>
+          <p class="bento-desc">Responsive and alive. Our UI defers to your content—it's the frame, not the painting.
+            Every interaction feels purposeful and fast.</p>
         </div>
       </div>
     </section>
@@ -1058,7 +1174,8 @@
 
       <div class="testimonials-grid">
         <div class="testimonial-card reveal reveal-delay-1">
-          <blockquote class="testimonial-quote">Finally, a deployment tool that doesn't make me feel stupid. I pushed my first app in under 5 minutes with zero config.</blockquote>
+          <blockquote class="testimonial-quote">Finally, a deployment tool that doesn't make me feel stupid. I pushed my
+            first app in under 5 minutes with zero config.</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">SK</div>
             <div>
@@ -1069,7 +1186,8 @@
         </div>
 
         <div class="testimonial-card reveal reveal-delay-2">
-          <blockquote class="testimonial-quote">The error messages alone are worth it. Instead of cryptic stack traces, I get actual solutions. It's like having a senior engineer on call.</blockquote>
+          <blockquote class="testimonial-quote">The error messages alone are worth it. Instead of cryptic stack traces,
+            I get actual solutions. It's like having a senior engineer on call.</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">MR</div>
             <div>
@@ -1080,7 +1198,8 @@
         </div>
 
         <div class="testimonial-card reveal reveal-delay-3">
-          <blockquote class="testimonial-quote">We moved 12 services to Kubeletto in a weekend. Our ops team went from firefighting to actually improving systems.</blockquote>
+          <blockquote class="testimonial-quote">We moved 12 services to Kubeletto in a weekend. Our ops team went from
+            firefighting to actually improving systems.</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">JP</div>
             <div>
@@ -1105,9 +1224,15 @@
           <p class="pricing-price">$0 <span>/mo</span></p>
           <p class="pricing-desc">Perfect for side projects and learning.</p>
           <ul class="pricing-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 project</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Shared resources</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Community support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> 1 project</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Shared resources</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Community support</li>
           </ul>
           <a href="#signup" class="pricing-btn secondary">Get Started</a>
         </div>
@@ -1117,10 +1242,18 @@
           <p class="pricing-price">$29 <span>/mo</span></p>
           <p class="pricing-desc">For growing teams and production apps.</p>
           <ul class="pricing-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited projects</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated resources</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom domains</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Unlimited projects</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Dedicated resources</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Priority support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Custom domains</li>
           </ul>
           <a href="#signup" class="pricing-btn primary">Subscribe</a>
         </div>
@@ -1130,10 +1263,18 @@
           <p class="pricing-price">Custom</p>
           <p class="pricing-desc">For organizations with advanced needs.</p>
           <ul class="pricing-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Pro</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SSO & SAML</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SLA guarantee</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Everything in Pro</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> SSO & SAML</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> SLA guarantee</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Dedicated support</li>
           </ul>
           <a href="#signup" class="pricing-btn secondary">Contact Sales</a>
         </div>
@@ -1234,7 +1375,7 @@
         const centerY = rect.height / 2;
         const rotateX = (y - centerY) / 15;
         const rotateY = (centerX - x) / 15;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
       });
 
@@ -1253,7 +1394,7 @@
         const rect = ctaBtn.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-        
+
         ctaBtn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
       });
 
@@ -1277,4 +1418,5 @@
     });
   </script>
 </body>
+
 </html>
