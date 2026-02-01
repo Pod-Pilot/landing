@@ -13,6 +13,7 @@ import { config } from '../config';
     <div class="pricing-card reveal reveal-delay-1">
       <p class="pricing-tier">Starter</p>
       <p class="pricing-price">Rp 30.000 <span>/bulan</span></p>
+      <p class="pricing-trial">14 hari gratis untuk pengguna baru</p>
       <p class="pricing-desc">For solo builders and early pilots.</p>
       <ul class="pricing-features">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 1 project</li>
@@ -44,7 +45,7 @@ import { config } from '../config';
       <p class="pricing-desc">For organizations with advanced needs.</p>
       <ul class="pricing-features">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Pro</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SSO & SAML</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated resources</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SLA guarantee</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated support</li>
       </ul>
@@ -73,5 +74,12 @@ import { config } from '../config';
   .pricing-note svg {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .pricing-trial {
+    color: var(--accent, #6366f1);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: -0.5rem 0 0.75rem;
   }
 </style>

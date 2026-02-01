@@ -43,6 +43,17 @@ import Footer from '../components/Footer.astro';
           <section>
             <h2>3. Subscription and Payments</h2>
             <p>Kubeletto offers subscription-based pricing plans in Indonesian Rupiah (IDR):</p>
+
+            <div class="trial-banner">
+              <div class="trial-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="trial-content">
+                <h3>14 Hari Gratis untuk Pengguna Baru</h3>
+                <p>New users receive a <strong>14-day free trial</strong> of the Starter plan. No credit card required. Trial automatically converts to the Starter paid plan after 14 days unless cancelled.</p>
+              </div>
+            </div>
+
             <div class="pricing-summary">
               <div class="plan-item">
                 <span class="plan-name">Starter Plan</span>
@@ -57,7 +68,7 @@ import Footer from '../components/Footer.astro';
               <div class="plan-item">
                 <span class="plan-name">Enterprise</span>
                 <span class="plan-price">Custom</span>
-                <span class="plan-desc">Contact sales for details</span>
+                <span class="plan-desc">Dedicated resources, SLA guarantee, dedicated support. Contact sales for details.</span>
               </div>
             </div>
             <p>Payments are processed securely through our authorized payment provider in Indonesian Rupiah (IDR). By subscribing, you authorize us to charge your payment method on a recurring monthly basis until you cancel your subscription.</p>
@@ -67,6 +78,8 @@ import Footer from '../components/Footer.astro';
           <section>
             <h2>4. Billing and Cancellation</h2>
             <ul>
+              <li><strong>Free Trial:</strong> New users receive a 14-day free trial of the Starter plan. No payment information is required to start the trial.</li>
+              <li><strong>Trial Conversion:</strong> At the end of the trial period, your account will automatically convert to the Starter paid plan (Rp 30.000/bulan) unless you cancel or upgrade to a different plan.</li>
               <li>Subscriptions are billed monthly in advance</li>
               <li>You may cancel your subscription at any time through your account settings</li>
               <li>Cancellation takes effect at the end of the current billing period</li>
@@ -350,6 +363,48 @@ import Footer from '../components/Footer.astro';
 
   .contact-box p:last-child {
     margin-bottom: 0;
+  }
+
+  .trial-banner {
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    margin: 1.5rem 0;
+    align-items: flex-start;
+  }
+
+  .trial-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent, #6366f1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .trial-icon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+
+  .trial-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent, #6366f1);
+    margin-bottom: 0.25rem;
+  }
+
+  .trial-content p {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 0;
+    line-height: 1.6;
   }
 
   @media (max-width: 768px) {
