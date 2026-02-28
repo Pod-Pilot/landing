@@ -278,6 +278,7 @@ section {
   opacity: 0;
   transform: translateY(100%);
   animation: revealUp 1s var(--ease-out-expo) forwards;
+  will-change: transform, opacity;
 }
 
 .hero-title .line:nth-child(1) span {
@@ -494,6 +495,8 @@ section {
   transition: all 0.5s var(--ease-out-expo);
   transform-style: preserve-3d;
   cursor: default;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .bento-card::before {
@@ -596,6 +599,7 @@ section {
   margin-bottom: 0.5rem;
   opacity: 0;
   transform: translateY(10px);
+  will-change: transform, opacity;
 }
 
 .terminal-line.visible {
@@ -640,6 +644,8 @@ section {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.4s var(--ease-out-expo);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .testimonial-card:hover {
@@ -894,6 +900,7 @@ footer {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s var(--ease-out-expo);
+  will-change: transform, opacity;
 }
 
 .reveal.visible {

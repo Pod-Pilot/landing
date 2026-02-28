@@ -35,20 +35,32 @@ import { config } from '../config';
 </section>
 
 <script is:inline>
-  // Magnetic button effect
+  // Magnetic button effect with requestAnimationFrame for smoother animation
   const ctaBtn = document.querySelector('.cta-btn');
 
   if (ctaBtn) {
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
     ctaBtn.addEventListener('mousemove', (e) => {
       const rect = ctaBtn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      ctaBtn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+      targetX = e.clientX - rect.left - rect.width / 2;
+      targetY = e.clientY - rect.top - rect.height / 2;
     });
 
     ctaBtn.addEventListener('mouseleave', () => {
-      ctaBtn.style.transform = '';
+      targetX = 0;
+      targetY = 0;
     });
+
+    function animate() {
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
+      ctaBtn.style.transform = `translate(${currentX * 0.1}px, ${currentY * 0.1}px) scale(1.05)`;
+      requestAnimationFrame(animate);
+    }
+    animate();
   }
 </script>
